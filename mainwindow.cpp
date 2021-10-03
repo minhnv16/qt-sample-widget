@@ -20,6 +20,9 @@ void MainWindow::on_pushButton_clicked()
 {
     QMessageBox msgBox;
     msgBox.setText("Hihi");
+    //msgBox.setStandardButtons(QMessageBox::Ok| QMessageBox::Yes);
+    msgBox.setStandardButtons(QMessageBox::Ok| QMessageBox::Cancel);
+
     msgBox.exec();
 }
 
