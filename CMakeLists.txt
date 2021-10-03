@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(untitled LANGUAGES CXX)
+set(PROJECT_NAME SampleWidget)
+project(${PROJECT_NAME} LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -29,7 +30,7 @@ find_package(Qt5 COMPONENTS Widgets LinguistTools REQUIRED)
 set(TS_FILES untitled_en_US.ts)
 
 if(ANDROID)
-  add_library(untitled SHARED
+  add_library(${PROJECT_NAME} SHARED
     main.cpp
     mainwindow.cpp
     mainwindow.h
@@ -37,7 +38,7 @@ if(ANDROID)
     ${TS_FILES}
   )
 else()
-  add_executable(untitled
+  add_executable(${PROJECT_NAME}
     main.cpp
     mainwindow.cpp
     mainwindow.h
@@ -46,6 +47,6 @@ else()
   )
 endif()
 
-target_link_libraries(untitled PRIVATE Qt5::Widgets)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Widgets)
 
 qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
