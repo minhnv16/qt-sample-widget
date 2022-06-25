@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-
+#include "dialogchild.h"
 #include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -27,7 +27,9 @@ void MainWindow::on_pushButton_clicked()
     msgBox.exec();
 }
 
-void MainWindow::on_textEdit_textChanged()
+void MainWindow::on_pushButtonShowChild_clicked()
 {
-
+    DialogChild w;
+    w.exec();
 }
+

@@ -18,9 +18,11 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-    void on_textEdit_textChanged();
+    void on_pushButtonShowChild_clicked();
 
 private:
     Ui::MainWindow *ui;
+    Ui::MainWindow *ui2;
+
 };
 #endif // MAINWINDOW_H

@@ -37,6 +37,19 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButtonShowChild">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show Child</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
