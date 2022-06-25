@@ -19,7 +19,8 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     QMessageBox msgBox;
-    msgBox.setText("Hihi");
+
+    msgBox.setText(ui->lineEdit->text());
     //msgBox.setStandardButtons(QMessageBox::Ok| QMessageBox::Yes);
     msgBox.setStandardButtons(QMessageBox::Ok| QMessageBox::Cancel);
 
